@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>物流跟踪详情</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjlbB+TQ5jy7cRwOaOdLJgUib+BkfyJqXxkMzEz9ATKlkPYzszTgBllKAnlyFmNcAuLo=" crossorigin="anonymous">
+<style>
+  body { font-family: Arial, sans-serif; }
+  .container { max-width: 800px; margin: auto; padding: 20px; }
+  .header { font-size: 24px; font-weight: bold; margin-bottom: 1em; }
+  .route { display: flex; align-items: center; margin-bottom: 1em; }
+  .route i { margin: 0 10px; }
+  .timeline { list-style-type: none; padding: 0; margin: 0; }
+  .timeline-item { position: relative; padding: 1em; border-left: 2px solid #ccc; margin-bottom: 1em; }
+  .timeline-badge { font-size: 14px; background-color: #eee; padding: 5px 10px; position: absolute; top: 0; left: -1.5em; }
+  .timeline-date { font-weight: bold; color: #666; }
+  .timeline-description { margin-top: 5px; }
+
+  /* 添加额外样式以适应移动端设备 */
+  @media (max-width: 767px) {
+    .route { flex-direction: column; }
+    .route i { display: block; margin: 10px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">物流单号：CA645443291US</div>
+  
+  <div class="route">
+    <span class="route-origin">起运地：洛杉矶，美国</span>
+    <i class="fas fa-exchange-alt"></i>
+    <span class="route-destination">目的地：中国香港特别行政区</span>
+  </div>
+  
+  <ul class="timeline">
+    <li class="timeline-item">
+      <div class="timeline-badge">8 March 2024</div>
+      <div class="timeline-content">
+        <span class="timeline-date">发货日期</span>
+        <p class="timeline-description">货物已装载上洛杉矶港船只。</p>
+      </div>
+    </li>
+    
+    <li class="timeline-item">
+      <div class="timeline-badge">10 March 2024</div>
+      <div class="timeline-content">
+        <span class="timeline-date">运输动态</span>
+        <p class="timeline-description">船只离开洛杉矶，途径巴拿马运河转运。</p>
+      </div>
+    </li>
+    
+    <!-- 其他物流事件时间线可继续添加 -->
+
+    <!-- 示例结束 -->
+    <li class="timeline-item">
+      <div class="timeline-badge">今日</div>
+      <div class="timeline-content">
+        <span class="timeline-date">当前状态</span>
+        <p class="timeline-description">货物已抵达香港港口，正在等待清关（单号：CA645443291US）。</p>
+      </div>
+    </li>
+  </ul>
+</div>
+</body>
+</html>
